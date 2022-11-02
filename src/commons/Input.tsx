@@ -208,7 +208,7 @@ function createStyles(props: any) {
       alignContent: 'center',
       backgroundColor: colors.neutral.white,
       alignItems: 'center',
-      borderWidth: 1.5,
+      borderWidth: 1,
       borderColor,
       borderRadius: 10,
       paddingHorizontal: 10,

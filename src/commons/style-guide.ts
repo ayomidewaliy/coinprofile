@@ -12,6 +12,11 @@ const neutral = {
   white: '#FFFFFF',
   dark: '#000000',
   bodytext: '#1F2023',
+  inactive: '#CCCCCC',
+  guyabano: '#F8F8F8',
+  silver: '#AAAAAA',
+  bg: '#F8F8F8',
+  borders: '#EBEBEB',
 };
 
 export const colors = {primary, secondary, neutral, error};

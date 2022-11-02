@@ -1,11 +1,11 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
+import {StyleSheet, View} from 'react-native';
+import {SvgUri} from 'react-native-svg';
 
 import {Screens} from '@navigation/types';
 import Layout from '@src/components/Layout';
 import {CustomText} from '@src/components/CustomText';
-import {StyleSheet, View} from 'react-native';
-import {SvgUri} from 'react-native-svg';
 import {colors, font} from '@src/commons';
 import Button from '@src/components/Button';
 import {isAndroid, isSmallScreen} from '@src/utils';
