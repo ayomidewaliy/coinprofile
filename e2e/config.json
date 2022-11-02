@@ -1,5 +1,4 @@
 {
-  "globalTeardown": "./global-teardown.ts",
   "setupFilesAfterEnv": ["./setup.ts"],
   "maxWorkers": 1,
   "testEnvironment": "./environment",

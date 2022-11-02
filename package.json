@@ -9,7 +9,9 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "build:e2e:ios": "detox build -c ios",
-    "test:e2e:ios": "detox test -c ios"
+    "test:e2e:ios": "detox test -c ios",
+    "build:e2e:android": "detox build -c android",
+    "test:e2e:android": "detox test -c android"
   },
   "dependencies": {
     "@react-native-community/netinfo": "^9.3.6",
@@ -30,6 +32,7 @@
     "@react-native-community/eslint-config": "^2.0.0",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^26.0.23",
+    "@types/node": "^18.11.9",
     "@types/numeral": "^2.0.2",
     "@types/react": "^18.0.21",
     "@types/react-native": "^0.70.6",
