@@ -27,6 +27,7 @@ interface LayoutProps {
   noStatusBar?: boolean;
   isKeyboardDismissible?: boolean;
   children: React.ReactNode;
+  testID?: string;
 }
 
 const Layout: React.FC<LayoutProps> = ({
@@ -44,6 +45,7 @@ const Layout: React.FC<LayoutProps> = ({
   noStatusBar = false,
   isKeyboardDismissible,
   isDarkBg = false,
+  testID,
 }) => {
   const insets = useSafeAreaInsets();
 
@@ -83,7 +85,7 @@ const Layout: React.FC<LayoutProps> = ({
         </View>
       )}
 
-      <View style={styles.mainLayout}>
+      <View style={styles.mainLayout} testID={testID}>
         {header}
 
         {isAndroid || isOutsideKeyboard ? (

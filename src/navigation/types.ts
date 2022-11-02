@@ -4,7 +4,7 @@ type CoinDetail = {
 };
 
 export type RootStackParamList = {
-  GetStarted: undefined;
+  Welcome: undefined;
   Home: undefined;
   CoinDetail: CoinDetail;
 };

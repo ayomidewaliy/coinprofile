@@ -15,7 +15,7 @@ import {colors, font, PADDING} from '@src/commons';
 import {ResultsLoader} from '@src/components/ResultsLoader';
 import {getCoins} from '@src/api';
 import {formatValue} from '@src/utils';
-import Input from '@src/commons/Input';
+import Input from '@src/components/Input';
 
 type HomeProps = NativeStackScreenProps<Screens, 'Home'>;
 
@@ -74,6 +74,7 @@ export const Home: React.FC<HomeProps> = ({navigation}) => {
       <TouchableOpacity
         style={styles.listItem}
         activeOpacity={0.8}
+        testID="CoinItemCard"
         onPress={() => handleNav(coin)}>
         <CustomText isMedium>{coin.name}</CustomText>
 
@@ -116,15 +117,15 @@ export const Home: React.FC<HomeProps> = ({navigation}) => {
             <RefreshControl refreshing={!!isLoading} onRefresh={fetchCoins} />
           }
           ListHeaderComponent={
-            <View>
-              <Input
-                value={search}
-                onChangeText={handleSearch}
-                placeholder="Search coin"
-                mBottom={16}
-              />
-            </View>
+            <Input
+              value={search}
+              onChangeText={handleSearch}
+              placeholder="Search coin"
+              mBottom={16}
+              testID="SearchInput"
+            />
           }
+          testID="CoinsListView"
         />
       )}
     </Layout>

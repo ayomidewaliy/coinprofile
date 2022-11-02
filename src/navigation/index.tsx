@@ -11,8 +11,8 @@ export default function RootNavigator() {
   return (
     <RootStack.Navigator
       screenOptions={defaultScreenOptions}
-      initialRouteName="GetStarted">
-      <RootStack.Screen name="GetStarted" component={screens.GetStarted} />
+      initialRouteName="Welcome">
+      <RootStack.Screen name="Welcome" component={screens.Welcome} />
       <RootStack.Screen name="Home" component={screens.Home} />
       <RootStack.Screen name="CoinDetail" component={screens.CoinDetail} />
     </RootStack.Navigator>

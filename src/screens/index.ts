@@ -1,3 +1,3 @@
-export {GetStarted} from './GetStarted';
+export {Welcome} from './Welcome';
 export {Home} from './Home';
 export {CoinDetail} from './CoinDetail';

@@ -44,6 +44,7 @@ export interface InputProps extends TextInputProps {
   errorMsgMarginTop?: number;
   onSubmitEditing?: () => void;
   height?: number;
+  testID?: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -78,6 +79,7 @@ const Input: React.FC<InputProps> = ({
   onSubmitEditing,
   height = 50,
   inputContainerStyle,
+  testID,
 }) => {
   const txtColor = inputColor || colors.neutral.bodytext;
   const txtFontSize = inputFontSize || font.size.pxl;
@@ -156,6 +158,7 @@ const Input: React.FC<InputProps> = ({
               editable={disabled ? false : true}
               selectTextOnFocus={disabled ? false : true}
               returnKeyType={isDoneVisible ? 'done' : undefined}
+              testID={testID}
             />
           )}
         </View>

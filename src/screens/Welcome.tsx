@@ -10,7 +10,7 @@ import {colors, font} from '@src/commons';
 import Button from '@src/components/Button';
 import {isAndroid, isSmallScreen} from '@src/utils';
 
-type GetStartedProps = NativeStackScreenProps<Screens, 'GetStarted'>;
+type WelcomeProps = NativeStackScreenProps<Screens, 'Welcome'>;
 
 const ITEMS = [
   {title: 'Send and receive money from anywhere'},
@@ -18,11 +18,11 @@ const ITEMS = [
   {title: 'Earn up to 5% interest on your USD balance'},
 ];
 
-export const GetStarted: React.FC<GetStartedProps> = ({navigation}) => {
+export const Welcome: React.FC<WelcomeProps> = ({navigation}) => {
   const handleNav = () => navigation.navigate('Home');
 
   return (
-    <Layout bgColor={colors.secondary}>
+    <Layout bgColor={colors.secondary} testID="WelcomeScreenView">
       <View style={styles.container}>
         <SvgUri uri="https://res.cloudinary.com/payourse-technologies-inc/image/upload/v1653093948/coinprofile%202.0/logoWhite.svg" />
 
@@ -49,7 +49,11 @@ export const GetStarted: React.FC<GetStartedProps> = ({navigation}) => {
             );
           })}
 
-          <Button title="See how it works" onPress={handleNav} />
+          <Button
+            title="See how it works"
+            testID="HowItWorksButton"
+            onPress={handleNav}
+          />
         </View>
       </View>
     </Layout>

@@ -18,6 +18,7 @@ interface ButtonProps {
   flexSize?: number;
   isBold?: boolean;
   style?: StyleProp<ViewStyle>;
+  testID?: string;
 }
 
 const Button: React.FC<ButtonProps> = props => {
@@ -45,6 +46,7 @@ const Button: React.FC<ButtonProps> = props => {
       onPress={handlePress}
       disabled={disabled}
       activeOpacity={0.65}
+      testID={props.testID}
       style={[styles.container, style]}>
       <CustomText
         color={fontColor}
